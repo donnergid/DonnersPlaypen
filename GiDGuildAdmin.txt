@@ -2,3 +2,10 @@ Feature List:
 1. Track and monitor membership. 
 2. Track and monitor loot drops. 
 3. Track character statistics
+4. Phone and xbox integration. 	
+
+
+Bob's ideas: 
+1. Track participation
+2. Understand who has the greatest need. 
+3. Website integration. 
