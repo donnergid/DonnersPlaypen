@@ -8,7 +8,29 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="Black">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Text="GiD Administration Console" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="375" FontSize="36" RequestedTheme="Dark" FocusVisualSecondaryBrush="#9913175E" Margin="36,20,0,0">
+            <TextBlock.FocusVisualPrimaryBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF6E79B9" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.FocusVisualPrimaryBrush>
+        </TextBlock>
+        <Grid x:Name="grdNewUser" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="659" Background="#FF761F1F" Margin="831,101,0,0">
+            <TextBox x:Name="txtbxCharName" HorizontalAlignment="Left" Height="50" Margin="272,10,0,0" Text="Character Name: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
+            <TextBox x:Name="txtbxCharRace" HorizontalAlignment="Left" Height="50" Margin="272,66,0,0" Text="Character Race: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
+            <TextBox x:Name="txtbxCharClass" HorizontalAlignment="Left" Height="50" Margin="272,122,0,0" Text="Character Class: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
+            <TextBox x:Name="txtbxCharSpec" HorizontalAlignment="Left" Height="50" Margin="272,178,0,0" Text="Character Spec: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
+            <TextBox x:Name="txtbxRealm" HorizontalAlignment="Left" Height="50" Margin="272,234,0,0" Text="Realm: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
+            <TextBlock x:Name="txtblkCharName" HorizontalAlignment="Left" Height="50" Margin="18,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark" Text="Character Name: "/>
+            <TextBlock x:Name="txtblkCharRace" HorizontalAlignment="Left" Height="50" Margin="18,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"><Run Text="Character Race: "/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="txtBlkRealm" HorizontalAlignment="Left" Height="50" Margin="18,234,0,0" Text="Realm: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"/>
+            <TextBlock x:Name="txtblkCharSpec1" HorizontalAlignment="Left" Height="50" Margin="18,178,0,0" Text="Character Spec: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"/>
+            <TextBlock x:Name="txtblkCharClass" HorizontalAlignment="Left" Height="50" Margin="18,122,0,0" Text="Character Class: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"/>
+            <Button x:Name="btnNewMemApply" Content="Apply" HorizontalAlignment="Left" Height="48" Margin="467,303,0,0" VerticalAlignment="Top" Width="180" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F" Click="btnNewMemApply_Click"/>
+        </Grid>
+        <Button x:Name="btnNewMember" Content="New Member&#xA;" HorizontalAlignment="Left" Height="48" Margin="1310,27,0,0" VerticalAlignment="Top" Width="180" Click="btnNewMember_Click_1" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F"/>
 
     </Grid>
 </Page>
