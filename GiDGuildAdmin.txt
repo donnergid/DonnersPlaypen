@@ -10,3 +10,6 @@ Bob's ideas:
 2. Understand who has the greatest need. 
 3. Website integration. 
 4. Testing new commit
+5. assign teams based on members availibilty and times
+6. track pvp stats and mythic+ stats
+7. 
