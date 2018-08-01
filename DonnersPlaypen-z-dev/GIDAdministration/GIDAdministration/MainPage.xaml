@@ -35,8 +35,17 @@
                 <ComboBoxItem Content="Other" HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="100"/>
             </ComboBox>
             <TextBlock x:Name="txtblkGuildName" HorizontalAlignment="Left" Height="50" Margin="20,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark" Text="Guild Name: "/>
+            <TextBox x:Name="txtbxCharName_Copy" HorizontalAlignment="Left" Height="50" Margin="274,94,0,0" Text="Character Name: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
         </Grid>
-        <Button x:Name="btnNewMember" Content="New Member&#xA;" HorizontalAlignment="Left" Height="48" Margin="1310,27,0,0" VerticalAlignment="Top" Width="180" Click="btnNewMember_Click_1" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F" BorderBrush="#FF2A1010"/>
+        <Button x:Name="btnNewMember" Content="New Member" HorizontalAlignment="Left" Height="48" Margin="1310,27,0,0" VerticalAlignment="Top" Width="180" Click="btnNewMember_Click_1" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F" BorderBrush="#FF2A1010"/>
+        <Button x:Name="btnAddGuild" Content="Add Guild" HorizontalAlignment="Left" Height="48" Margin="1102,27,0,0" VerticalAlignment="Top" Width="180" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F" BorderBrush="#FF2A1010" Click="btnAddGuild_Click"/>
+        <Grid x:Name="grdAddGuild" HorizontalAlignment="Left" Height="557" VerticalAlignment="Top" Width="659" Background="#FF761F1F" Margin="128,101,0,0" BorderBrush="#FF2A1010">
+            <TextBlock x:Name="txtBlkRealm1" HorizontalAlignment="Left" Height="50" Margin="20,82,0,0" Text="Realm: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"/>
+            <Button x:Name="btnGuildApply" Content="Apply" HorizontalAlignment="Left" Height="48" Margin="469,387,0,0" VerticalAlignment="Top" Width="180" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F" Click="btnNewMemApply_Click" BorderBrush="#FF2A1010"/>
+            <TextBlock x:Name="txtblkGuildName1" HorizontalAlignment="Left" Height="50" Margin="20,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark" Text="Guild Name: "/>
+            <TextBox x:Name="txtbxGuildName" HorizontalAlignment="Left" Height="50" Margin="274,20,0,0" Text="&lt;Insert Guild Name&gt;" VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
+            <TextBox x:Name="txtbxGuildName_Copy" HorizontalAlignment="Left" Height="50" Margin="274,82,0,0" Text="&lt;Insert Realm Name&gt;" VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
+        </Grid>
 
     </Grid>
 </Page>

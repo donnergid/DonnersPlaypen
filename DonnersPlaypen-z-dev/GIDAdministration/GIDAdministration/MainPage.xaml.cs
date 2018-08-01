@@ -27,13 +27,10 @@ namespace GIDAdministration
         public MainPage()
         {
             this.InitializeComponent();
-
-            // Goals: 
-            // create member objects
-            // store them in a JSON format
-            // Display the guild member list. 
             
-            this.grdNewUser.Visibility = Visibility.Collapsed; 
+            //Ensure the proper controls are not visible on init. 
+            this.grdNewUser.Visibility = Visibility.Collapsed;
+            this.grdAddGuild.Visibility = Visibility.Collapsed; 
         }
 
         private void btnNewMember_Click_1(object sender, RoutedEventArgs e)
@@ -47,10 +44,12 @@ namespace GIDAdministration
         private void btnNewMemApply_Click(object sender, RoutedEventArgs e)
         {
             // GuildMember tmpMember = GuildMember.AddMember(); 
+                        
+        }
 
-            
-            
-            
+        private void btnAddGuild_Click(object sender, RoutedEventArgs e)
+        {
+            grdAddGuild.Visibility = Visibility.Visible; 
         }
     }
 }
