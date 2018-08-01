@@ -3,10 +3,12 @@ Feature List:
 2. Track and monitor loot drops. 
 3. Track character statistics
 4. Phone and xbox integration. 	
-
+5. Need to add auto text parsing to the form inputs (optional)
+6. Need logging to monitor the local file storage of data. 
+7. Later need to move the local file storage to the cloud. 
 
 Bob's ideas: 
 1. Track participation
 2. Understand who has the greatest need. 
 3. Website integration. 
-4. Testing new commit
+

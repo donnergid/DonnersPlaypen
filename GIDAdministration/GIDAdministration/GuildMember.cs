@@ -8,6 +8,7 @@ namespace GIDAdministration
 {
     class GuildMember
     {
+        string guildName = null; 
         string charName = null;
         string charRace = null; 
         string charClass = null;
@@ -15,15 +16,20 @@ namespace GIDAdministration
         string charRealm = null; 
         // need association with the wowhead profile 
 
-        private void addMember(string tmpName, string tmpRace, string tmpClass, string tmpSpec, string tmpRealm)
+        public static GuildMember AddMember(string tmpGName, string tmpName, string tmpRace, string tmpClass, string tmpSpec, string tmpRealm)
         {
-            charName = tmpName;
-            charRace = tmpRace;
-            charClass = tmpClass;
-            charSpec = tmpSpec;
-            charRealm = tmpRealm; 
+            GuildMember gmTemp = new GuildMember();
 
-
+            gmTemp.guildName = tmpGName;
+            gmTemp.charName = tmpName;
+            gmTemp.charRace = tmpRace;
+            gmTemp.charClass = tmpClass;
+            gmTemp.charSpec = tmpSpec;
+            gmTemp.charRealm = tmpRealm;
+                        
+            // Add a logging file. 
+            return gmTemp; 
+            
         }
     }
 }

@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace GIDAdministration
@@ -31,8 +32,7 @@ namespace GIDAdministration
             // create member objects
             // store them in a JSON format
             // Display the guild member list. 
-
-
+            
             this.grdNewUser.Visibility = Visibility.Collapsed; 
         }
 
@@ -40,11 +40,16 @@ namespace GIDAdministration
         {
             // Spawn the new member text controls
             grdNewUser.Visibility = Visibility.Visible; 
+
+            
         }
 
         private void btnNewMemApply_Click(object sender, RoutedEventArgs e)
         {
-            GuildMember gmTemp = new GuildMember();
+            // GuildMember tmpMember = GuildMember.AddMember(); 
+
+            
+            
             
         }
     }
