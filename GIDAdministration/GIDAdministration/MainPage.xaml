@@ -17,7 +17,7 @@
                 </LinearGradientBrush>
             </TextBlock.FocusVisualPrimaryBrush>
         </TextBlock>
-        <Grid x:Name="grdNewUser" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="659" Background="#FF761F1F" Margin="831,101,0,0">
+        <Grid x:Name="grdNewUser" HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="659" Background="#FF761F1F" Margin="831,101,0,0">
             <TextBox x:Name="txtbxCharName" HorizontalAlignment="Left" Height="50" Margin="272,10,0,0" Text="Character Name: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
             <TextBox x:Name="txtbxCharRace" HorizontalAlignment="Left" Height="50" Margin="272,66,0,0" Text="Character Race: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
             <TextBox x:Name="txtbxCharClass" HorizontalAlignment="Left" Height="50" Margin="272,122,0,0" Text="Character Class: " VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
@@ -28,7 +28,14 @@
             <TextBlock x:Name="txtBlkRealm" HorizontalAlignment="Left" Height="50" Margin="18,234,0,0" Text="Realm: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"/>
             <TextBlock x:Name="txtblkCharSpec1" HorizontalAlignment="Left" Height="50" Margin="18,178,0,0" Text="Character Spec: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"/>
             <TextBlock x:Name="txtblkCharClass" HorizontalAlignment="Left" Height="50" Margin="18,122,0,0" Text="Character Class: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"/>
-            <Button x:Name="btnNewMemApply" Content="Apply" HorizontalAlignment="Left" Height="48" Margin="467,303,0,0" VerticalAlignment="Top" Width="180" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F" Click="btnNewMemApply_Click"/>
+            <Button x:Name="btnNewMemApply" Content="Apply" HorizontalAlignment="Left" Height="45" Margin="467,350,0,0" VerticalAlignment="Top" Width="180" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F" Click="btnNewMemApply_Click" RenderTransformOrigin="0.497,2.353"/>
+            <TextBlock x:Name="txtBlkRealm_Copy" HorizontalAlignment="Left" Height="6" Margin="18,324,0,0" Text="Realm: " TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark" RenderTransformOrigin="0.492,2.431">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform ScaleY="-1"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock x:Name="txtBlkRealm_Copy1" HorizontalAlignment="Left" Height="55" Margin="18,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" FontSize="24" RequestedTheme="Dark"><Run Text="Time Zone:"/><LineBreak/><Run/></TextBlock>
+            <TextBox x:Name="txtbxRealm_Copy" HorizontalAlignment="Left" Height="56" Margin="272,289,0,0" Text="Time Zone:" VerticalAlignment="Top" Width="375" FontSize="24" RequestedTheme="Dark"/>
         </Grid>
         <Button x:Name="btnNewMember" Content="New Member&#xA;" HorizontalAlignment="Left" Height="48" Margin="1310,27,0,0" VerticalAlignment="Top" Width="180" Click="btnNewMember_Click_1" FontSize="24" RequestedTheme="Dark" Background="#FF761F1F"/>
 
