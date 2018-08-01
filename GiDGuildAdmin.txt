@@ -12,4 +12,5 @@ Bob's ideas:
 4. Testing new commit
 5. assign teams based on members availibilty and times
 6. track pvp stats and mythic+ stats
-7. 
+7. Assign team leaders (Id say keep teams seperate minimise mix team raiding)
+8. 
