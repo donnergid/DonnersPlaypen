@@ -11,6 +11,4 @@ Bob's ideas:
 1. Track participation
 2. Understand who has the greatest need. 
 3. Website integration. 
-4. Assign teams based on members availibilty and times 
-5. Track pvp stats and mythic+ stats 
-6. Assign team leaders (Id say keep teams seperate minimise mix team raiding) 
+4. Testing new commit
