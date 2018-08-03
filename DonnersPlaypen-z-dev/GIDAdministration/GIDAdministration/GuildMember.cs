@@ -13,23 +13,34 @@ namespace GIDAdministration
         string charRace = null; 
         string charClass = null;
         string charSpec = null;
-        string charRealm = null; 
+        string charRealm = null;
+        Guild gRef = null; 
         // need association with the wowhead profile 
 
-        public static GuildMember AddMember(string tmpGName, string tmpName, string tmpRace, string tmpClass, string tmpSpec, string tmpRealm)
+        public void AddMember(string tmpGName, string tmpName, string tmpRace, string tmpClass, string tmpSpec, string tmpRealm)
         {
-            GuildMember gmTemp = new GuildMember();
+            guildName = tmpGName;
+            charName = tmpName;
+            charRace = tmpRace;
+            charClass = tmpClass;
+            charSpec = tmpSpec;
+            charRealm = tmpRealm;
 
-            gmTemp.guildName = tmpGName;
-            gmTemp.charName = tmpName;
-            gmTemp.charRace = tmpRace;
-            gmTemp.charClass = tmpClass;
-            gmTemp.charSpec = tmpSpec;
-            gmTemp.charRealm = tmpRealm;
-                        
-            // Add a logging file. 
-            return gmTemp; 
-            
+            //
+            //add logging stub
+            // 
+
+            //
+            // Use tmpbGName provided by user to search the gmMain guild list object. 
+            // 
+
+            foreach (Guild g in GuildLIst.gmMain)
+            {
+                if (g.gName == tmpGName)
+                {
+                    gRef = g;
+                }
+            }
         }
     }
 }

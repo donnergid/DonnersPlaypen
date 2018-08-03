@@ -12,6 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Newtonsoft.Json;
+using Windows.Storage; 
+
+
 
 
 
@@ -31,6 +35,11 @@ namespace GIDAdministration
             //Ensure the proper controls are not visible on init. 
             this.grdNewUser.Visibility = Visibility.Collapsed;
             this.grdAddGuild.Visibility = Visibility.Collapsed; 
+
+            //Search/Create for the dependent local files
+            // GuildList, MemberList & Logging files. 
+
+            
         }
 
         private void btnNewMember_Click_1(object sender, RoutedEventArgs e)
@@ -43,13 +52,81 @@ namespace GIDAdministration
 
         private void btnNewMemApply_Click(object sender, RoutedEventArgs e)
         {
-            // GuildMember tmpMember = GuildMember.AddMember(); 
-                        
+            GuildMember tmpMember = new GuildMember();
+            tmpMember.AddMember("Ghosts in the Darkness",txtbxCharName.Text, txtbxCharRace.Text, txtbxCharClass.Text, txtbxCharSpec.Text, txtbxRealm.Text); 
+                                    
         }
 
         private void btnAddGuild_Click(object sender, RoutedEventArgs e)
         {
             grdAddGuild.Visibility = Visibility.Visible; 
+        }
+
+
+        private async void btnGuildApply_Click_1(object sender, RoutedEventArgs e)
+        {
+            // add guild object here, store data and pass to Json writer. 
+            Guild tmpGuild = new Guild();
+
+            tmpGuild.gName = txtbxAddGuildName.Text;
+            tmpGuild.gRealm = txtbxAddRealm.Text;
+
+            GuildLIst.gmMain.Add(tmpGuild);
+
+
+
+            // StorageFolder sfold = Windows.ApplicationModel.Package.Current.InstalledLocation; 
+            // StorageFile sfile = await sfold.CreateFileAsync("Sample.json", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+            // txtblkStatus.Text = "file written/overwritten";
+            StorageFile newFile = await DownloadsFolder.CreateFileAsync("GuildList.json", CreationCollisionOption.OpenIfExists);
+           
+            try
+            {
+
+                await PathIO.WriteTextAsync(newFile.Path, "Swift as a shadow");
+
+            }
+            // Handle errors with catch blocks
+            catch (FileNotFoundException)
+            {
+                // For example, handle file not found
+            }
+            catch (UnauthorizedAccessException)
+            {
+                throw; 
+            }
+           
+            
+            /*
+            JsonSerializer serializer;
+
+            // Need to add access exception handling. 
+            try
+            {
+                
+                serializer = new JsonSerializer();
+                using (StreamWriter sw = new StreamWriter(ApplicationData.Current.LocalFolder))
+                {
+                    using (JsonWriter writer = new JsonTextWriter(sw))
+                    {
+                        serializer.Serialize(writer, GuildLIst.gmMain);
+                    }
+                }
+            }
+            catch (Exception oEX)
+            {
+
+                txtblkStatus.Text = "Exception found, " + oEX.Message; 
+            }
+
+            if (txtblkStatus.Text.Contains("Status"))
+            {
+                txtblkStatus.Text = "File Saved";
+            }
+            */
+
+
         }
     }
 }
