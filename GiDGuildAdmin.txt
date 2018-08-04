@@ -15,11 +15,11 @@ Bob's ideas:
 4. Assign teams based on members availibilty and times 
 5. Track pvp stats and mythic+ stats 
 6. Assign team leaders (Id say keep teams seperate minimise mix team raiding) 
+7: Top 10s (in guild dps, heal, tank(not sure how to rate tanking))
 
-
+Newest thoughts - all these need to be in Issue tasks: 
 Add Management console to hide add/remove pieces. 
 Need to be able to add Guilds. 
 Need to be able to add Communities. 
 Need to store the Guild data separately. 
 Need a function to pull the Realms/Server list. 
-
