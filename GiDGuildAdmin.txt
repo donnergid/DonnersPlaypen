@@ -4,6 +4,7 @@ Feature List:
 3. Track character statistics
 4. Phone and xbox integration. 	
 5. Need to add auto text parsing to the form inputs (optional)
+6. Ensure the member data is stored in a local file - later move to cloud storage. 
 6. Need logging to monitor the local file storage of data. 
 7. Later need to move the local file storage to the cloud. 
 
@@ -15,4 +16,10 @@ Bob's ideas:
 5. Track pvp stats and mythic+ stats 
 6. Assign team leaders (Id say keep teams seperate minimise mix team raiding) 
 7: Top 10s (in guild dps, heal, tank(not sure how to rate tanking))
-8
+
+Newest thoughts - all these need to be in Issue tasks: 
+Add Management console to hide add/remove pieces. 
+Need to be able to add Guilds. 
+Need to be able to add Communities. 
+Need to store the Guild data separately. 
+Need a function to pull the Realms/Server list. 

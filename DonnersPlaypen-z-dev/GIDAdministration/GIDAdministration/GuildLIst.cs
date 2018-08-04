@@ -8,6 +8,13 @@ namespace GIDAdministration
 {
     class GuildLIst
     {
-        public static List<GuildMember> gmMain = new List<GuildMember>(); 
+        public static List<Guild> gmMain = new List<Guild>(); 
+    }
+
+    class Guild
+    {
+        public string gName = null;
+        public string gRealm = null;
+        
     }
 }
