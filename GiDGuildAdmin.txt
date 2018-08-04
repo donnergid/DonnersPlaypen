@@ -14,3 +14,5 @@ Bob's ideas:
 4. Assign teams based on members availibilty and times 
 5. Track pvp stats and mythic+ stats 
 6. Assign team leaders (Id say keep teams seperate minimise mix team raiding) 
+7: Top 10s (in guild dps, heal, tank(not sure how to rate tanking))
+8
