@@ -110,6 +110,7 @@
             this.btnAddText.TabIndex = 2;
             this.btnAddText.Text = "Add Text";
             this.btnAddText.UseVisualStyleBackColor = true;
+            this.btnAddText.Click += new System.EventHandler(this.btnAddText_Click);
             // 
             // btnDeleteFile
             // 

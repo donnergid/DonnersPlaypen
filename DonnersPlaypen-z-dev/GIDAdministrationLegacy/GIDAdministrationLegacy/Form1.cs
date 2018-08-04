@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO; 
-
+using System.IO;
+using System.Configuration; 
 
 namespace GIDAdministrationLegacy
 {
@@ -42,8 +42,8 @@ namespace GIDAdministrationLegacy
         {
             try
             {
-                string fileName = @"E:\Utilities\Source\DonnersPlaypen-z-dev\GIDAdministration\GIDAdministration\Sample.json";
-
+                string fileName = ConfigurationManager.ConnectionStrings["filelocation"].ConnectionString + "GuildList.json";
+                
                 FileStream fs = File.Create(fileName);
                 fs.Close(); 
                 lblErrorStatus.Text = "File Created Successfully";
@@ -63,7 +63,8 @@ namespace GIDAdministrationLegacy
         {
             try
             {
-                string fileName = @"E:\Utilities\Source\DonnersPlaypen-z-dev\GIDAdministration\GIDAdministration\Sample.json";
+
+                string fileName = ConfigurationManager.ConnectionStrings["filelocation"].ConnectionString + "GuildList.json"; 
 
                 File.Delete(fileName);
                 
@@ -78,6 +79,11 @@ namespace GIDAdministrationLegacy
                 MessageBox.Show(oEx.Message);
                 throw;
             }
+        }
+
+        private void btnAddText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
