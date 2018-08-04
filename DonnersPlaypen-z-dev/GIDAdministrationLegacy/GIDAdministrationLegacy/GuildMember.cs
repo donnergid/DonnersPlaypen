@@ -15,11 +15,11 @@ namespace GIDAdministrationLegacy
             currentGuild = tmpGuild; 
         }
 
-        string charName;
-        string charRace;
-        string charClass;
-        string charSpec;
-        string locale; // Eventually this will be replaced with a Locale obj pulling from Wow APIs. 
+        string charName = null;
+        string charRace = null;
+        string charClass = null;
+        string charSpec = null;
+        string locale = null; // Eventually this will be replaced with a Locale obj pulling from Wow APIs. 
         Guild currentGuild; 
         
         // Need to add in a obj that defines talants. 
