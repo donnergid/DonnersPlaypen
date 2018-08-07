@@ -55,8 +55,6 @@
             this.lblCharRace = new System.Windows.Forms.Label();
             this.lblCharName = new System.Windows.Forms.Label();
             this.btnAddNewMember = new System.Windows.Forms.Button();
-            this.pnlShowMembers = new System.Windows.Forms.Panel();
-            this.lstbxShowMembers = new System.Windows.Forms.ListBox();
             this.btnShowMembers = new System.Windows.Forms.Button();
             this.pnlViewMembers = new System.Windows.Forms.Panel();
             this.lstvwViewMembers = new System.Windows.Forms.ListView();
@@ -64,14 +62,16 @@
             this.colHeadRace = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHeadClass = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHeadSpec = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlTestInterface.SuspendLayout();
             this.pnlAddNewMember.SuspendLayout();
-            this.pnlShowMembers.SuspendLayout();
             this.pnlViewMembers.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTestInterface
             // 
+            this.pnlTestInterface.AutoSize = true;
+            this.pnlTestInterface.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlTestInterface.BackColor = System.Drawing.Color.Firebrick;
             this.pnlTestInterface.Controls.Add(this.lblErrorStatus);
             this.pnlTestInterface.Controls.Add(this.btnHideTestInterface);
@@ -80,9 +80,10 @@
             this.pnlTestInterface.Controls.Add(this.btnAddText);
             this.pnlTestInterface.Controls.Add(this.btnDeleteFile);
             this.pnlTestInterface.Controls.Add(this.btnCreateFile);
-            this.pnlTestInterface.Location = new System.Drawing.Point(1, 973);
+            this.pnlTestInterface.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTestInterface.Location = new System.Drawing.Point(0, 754);
             this.pnlTestInterface.Name = "pnlTestInterface";
-            this.pnlTestInterface.Size = new System.Drawing.Size(1383, 316);
+            this.pnlTestInterface.Size = new System.Drawing.Size(1390, 307);
             this.pnlTestInterface.TabIndex = 0;
             // 
             // lblErrorStatus
@@ -94,7 +95,7 @@
             this.lblErrorStatus.Location = new System.Drawing.Point(839, 37);
             this.lblErrorStatus.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblErrorStatus.Name = "lblErrorStatus";
-            this.lblErrorStatus.Size = new System.Drawing.Size(245, 40);
+            this.lblErrorStatus.Size = new System.Drawing.Size(220, 35);
             this.lblErrorStatus.TabIndex = 11;
             this.lblErrorStatus.Text = "Errors show here...";
             // 
@@ -115,7 +116,7 @@
             this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplay.Location = new System.Drawing.Point(4, 167);
             this.lblDisplay.Name = "lblDisplay";
-            this.lblDisplay.Size = new System.Drawing.Size(946, 65);
+            this.lblDisplay.Size = new System.Drawing.Size(641, 45);
             this.lblDisplay.TabIndex = 4;
             this.lblDisplay.Text = "This is the text we will add to the JSON file. ";
             // 
@@ -165,9 +166,9 @@
             // btnShowTestInterface
             // 
             this.btnShowTestInterface.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnShowTestInterface.Location = new System.Drawing.Point(1198, 12);
+            this.btnShowTestInterface.Location = new System.Drawing.Point(541, 4);
             this.btnShowTestInterface.Name = "btnShowTestInterface";
-            this.btnShowTestInterface.Size = new System.Drawing.Size(180, 92);
+            this.btnShowTestInterface.Size = new System.Drawing.Size(85, 55);
             this.btnShowTestInterface.TabIndex = 5;
             this.btnShowTestInterface.Text = "Admin";
             this.btnShowTestInterface.UseVisualStyleBackColor = true;
@@ -176,6 +177,7 @@
             // pnlAddNewMember
             // 
             this.pnlAddNewMember.BackColor = System.Drawing.Color.Firebrick;
+            this.pnlAddNewMember.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlAddNewMember.Controls.Add(this.cmbbxRealm);
             this.pnlAddNewMember.Controls.Add(this.cmbbxGuildName);
             this.pnlAddNewMember.Controls.Add(this.lblRealm);
@@ -192,9 +194,9 @@
             this.pnlAddNewMember.Controls.Add(this.lblCharClass);
             this.pnlAddNewMember.Controls.Add(this.lblCharRace);
             this.pnlAddNewMember.Controls.Add(this.lblCharName);
-            this.pnlAddNewMember.Location = new System.Drawing.Point(-9, 0);
+            this.pnlAddNewMember.Location = new System.Drawing.Point(3, 65);
             this.pnlAddNewMember.Name = "pnlAddNewMember";
-            this.pnlAddNewMember.Size = new System.Drawing.Size(505, 525);
+            this.pnlAddNewMember.Size = new System.Drawing.Size(475, 387);
             this.pnlAddNewMember.TabIndex = 6;
             // 
             // cmbbxRealm
@@ -205,11 +207,11 @@
             "Antonidas",
             "Killrogg",
             "Shu\'halo"});
-            this.cmbbxRealm.Location = new System.Drawing.Point(268, 378);
+            this.cmbbxRealm.Location = new System.Drawing.Point(235, 326);
             this.cmbbxRealm.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxRealm.Name = "cmbbxRealm";
-            this.cmbbxRealm.Size = new System.Drawing.Size(230, 40);
-            this.cmbbxRealm.TabIndex = 14;
+            this.cmbbxRealm.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxRealm.TabIndex = 7;
             this.cmbbxRealm.Text = "<Choose Realm>";
             // 
             // cmbbxGuildName
@@ -221,11 +223,11 @@
             "Death Vendors",
             "Ghosts in the Darkness",
             "Origin"});
-            this.cmbbxGuildName.Location = new System.Drawing.Point(268, 332);
+            this.cmbbxGuildName.Location = new System.Drawing.Point(235, 282);
             this.cmbbxGuildName.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxGuildName.Name = "cmbbxGuildName";
-            this.cmbbxGuildName.Size = new System.Drawing.Size(230, 40);
-            this.cmbbxGuildName.TabIndex = 13;
+            this.cmbbxGuildName.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxGuildName.TabIndex = 6;
             this.cmbbxGuildName.Text = "<Choose Guild>";
             // 
             // lblRealm
@@ -234,7 +236,7 @@
             this.lblRealm.BackColor = System.Drawing.Color.IndianRed;
             this.lblRealm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRealm.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblRealm.Location = new System.Drawing.Point(25, 379);
+            this.lblRealm.Location = new System.Drawing.Point(9, 326);
             this.lblRealm.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblRealm.Name = "lblRealm";
             this.lblRealm.Size = new System.Drawing.Size(220, 35);
@@ -247,7 +249,7 @@
             this.lblGuildName.BackColor = System.Drawing.Color.IndianRed;
             this.lblGuildName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblGuildName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblGuildName.Location = new System.Drawing.Point(25, 332);
+            this.lblGuildName.Location = new System.Drawing.Point(9, 282);
             this.lblGuildName.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblGuildName.Name = "lblGuildName";
             this.lblGuildName.Size = new System.Drawing.Size(220, 35);
@@ -257,9 +259,9 @@
             // btnAddMemberApply
             // 
             this.btnAddMemberApply.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAddMemberApply.Location = new System.Drawing.Point(408, 465);
+            this.btnAddMemberApply.Location = new System.Drawing.Point(368, 9);
             this.btnAddMemberApply.Name = "btnAddMemberApply";
-            this.btnAddMemberApply.Size = new System.Drawing.Size(90, 46);
+            this.btnAddMemberApply.Size = new System.Drawing.Size(70, 35);
             this.btnAddMemberApply.TabIndex = 8;
             this.btnAddMemberApply.Text = "Apply";
             this.btnAddMemberApply.UseVisualStyleBackColor = true;
@@ -271,10 +273,10 @@
             this.label2.BackColor = System.Drawing.Color.Firebrick;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 22F);
-            this.label2.Location = new System.Drawing.Point(25, 12);
+            this.label2.Location = new System.Drawing.Point(9, 9);
             this.label2.MinimumSize = new System.Drawing.Size(220, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(468, 62);
+            this.label2.Size = new System.Drawing.Size(321, 43);
             this.label2.TabIndex = 10;
             this.label2.Text = "New Member Creation";
             // 
@@ -289,12 +291,12 @@
             "EDT",
             "MDT",
             "PDT"});
-            this.cmbbxLocale.Location = new System.Drawing.Point(268, 285);
+            this.cmbbxLocale.Location = new System.Drawing.Point(235, 238);
             this.cmbbxLocale.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxLocale.Name = "cmbbxLocale";
-            this.cmbbxLocale.Size = new System.Drawing.Size(230, 40);
-            this.cmbbxLocale.TabIndex = 9;
-            this.cmbbxLocale.Text = "<Choose Locale>";
+            this.cmbbxLocale.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxLocale.TabIndex = 5;
+            this.cmbbxLocale.Text = "<Choose Time Zone>";
             // 
             // lblAccLocale
             // 
@@ -302,31 +304,31 @@
             this.lblAccLocale.BackColor = System.Drawing.Color.IndianRed;
             this.lblAccLocale.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblAccLocale.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblAccLocale.Location = new System.Drawing.Point(25, 285);
+            this.lblAccLocale.Location = new System.Drawing.Point(9, 238);
             this.lblAccLocale.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblAccLocale.Name = "lblAccLocale";
             this.lblAccLocale.Size = new System.Drawing.Size(220, 35);
             this.lblAccLocale.TabIndex = 8;
-            this.lblAccLocale.Text = "Account Locale: ";
+            this.lblAccLocale.Text = "Account Time Zone: ";
             // 
             // txbxCharName
             // 
             this.txbxCharName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txbxCharName.Location = new System.Drawing.Point(268, 94);
+            this.txbxCharName.Location = new System.Drawing.Point(235, 61);
             this.txbxCharName.Name = "txbxCharName";
-            this.txbxCharName.Size = new System.Drawing.Size(230, 39);
-            this.txbxCharName.TabIndex = 7;
+            this.txbxCharName.Size = new System.Drawing.Size(230, 29);
+            this.txbxCharName.TabIndex = 1;
             this.txbxCharName.Text = "<Enter Name>";
             // 
             // cmbbxCharSpec
             // 
             this.cmbbxCharSpec.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbbxCharSpec.FormattingEnabled = true;
-            this.cmbbxCharSpec.Location = new System.Drawing.Point(268, 239);
+            this.cmbbxCharSpec.Location = new System.Drawing.Point(235, 192);
             this.cmbbxCharSpec.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxCharSpec.Name = "cmbbxCharSpec";
-            this.cmbbxCharSpec.Size = new System.Drawing.Size(230, 40);
-            this.cmbbxCharSpec.TabIndex = 6;
+            this.cmbbxCharSpec.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxCharSpec.TabIndex = 4;
             this.cmbbxCharSpec.Text = "...";
             // 
             // lblCharSpec
@@ -335,7 +337,7 @@
             this.lblCharSpec.BackColor = System.Drawing.Color.IndianRed;
             this.lblCharSpec.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCharSpec.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCharSpec.Location = new System.Drawing.Point(25, 239);
+            this.lblCharSpec.Location = new System.Drawing.Point(9, 192);
             this.lblCharSpec.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblCharSpec.Name = "lblCharSpec";
             this.lblCharSpec.Size = new System.Drawing.Size(220, 35);
@@ -359,11 +361,11 @@
             "Shaman",
             "Warlock",
             "Warrior"});
-            this.cmbbxCharClass.Location = new System.Drawing.Point(268, 191);
+            this.cmbbxCharClass.Location = new System.Drawing.Point(235, 147);
             this.cmbbxCharClass.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxCharClass.Name = "cmbbxCharClass";
-            this.cmbbxCharClass.Size = new System.Drawing.Size(230, 40);
-            this.cmbbxCharClass.TabIndex = 4;
+            this.cmbbxCharClass.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxCharClass.TabIndex = 3;
             this.cmbbxCharClass.Text = "<Choose Class>";
             this.cmbbxCharClass.SelectedIndexChanged += new System.EventHandler(this.cmbbxCharClass_SelectedIndexChanged);
             // 
@@ -386,11 +388,11 @@
             "Night Elf",
             "Pandaren",
             "Worgen"});
-            this.cmbbxCharRace.Location = new System.Drawing.Point(268, 142);
+            this.cmbbxCharRace.Location = new System.Drawing.Point(235, 105);
             this.cmbbxCharRace.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxCharRace.Name = "cmbbxCharRace";
-            this.cmbbxCharRace.Size = new System.Drawing.Size(230, 40);
-            this.cmbbxCharRace.TabIndex = 3;
+            this.cmbbxCharRace.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxCharRace.TabIndex = 2;
             this.cmbbxCharRace.Text = "<Choose Race>";
             // 
             // lblCharClass
@@ -399,7 +401,7 @@
             this.lblCharClass.BackColor = System.Drawing.Color.IndianRed;
             this.lblCharClass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCharClass.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCharClass.Location = new System.Drawing.Point(25, 191);
+            this.lblCharClass.Location = new System.Drawing.Point(9, 147);
             this.lblCharClass.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblCharClass.Name = "lblCharClass";
             this.lblCharClass.Size = new System.Drawing.Size(220, 35);
@@ -412,7 +414,7 @@
             this.lblCharRace.BackColor = System.Drawing.Color.IndianRed;
             this.lblCharRace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCharRace.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCharRace.Location = new System.Drawing.Point(25, 142);
+            this.lblCharRace.Location = new System.Drawing.Point(9, 105);
             this.lblCharRace.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblCharRace.Name = "lblCharRace";
             this.lblCharRace.Size = new System.Drawing.Size(220, 35);
@@ -425,7 +427,7 @@
             this.lblCharName.BackColor = System.Drawing.Color.IndianRed;
             this.lblCharName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCharName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCharName.Location = new System.Drawing.Point(25, 94);
+            this.lblCharName.Location = new System.Drawing.Point(9, 61);
             this.lblCharName.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblCharName.Name = "lblCharName";
             this.lblCharName.Size = new System.Drawing.Size(220, 35);
@@ -435,39 +437,20 @@
             // btnAddNewMember
             // 
             this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAddNewMember.Location = new System.Drawing.Point(1003, 12);
+            this.btnAddNewMember.Location = new System.Drawing.Point(450, 4);
             this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(180, 92);
+            this.btnAddNewMember.Size = new System.Drawing.Size(85, 55);
             this.btnAddNewMember.TabIndex = 7;
             this.btnAddNewMember.Text = "New Member";
             this.btnAddNewMember.UseVisualStyleBackColor = true;
             this.btnAddNewMember.Click += new System.EventHandler(this.btnAddNewMember_Click);
             // 
-            // pnlShowMembers
-            // 
-            this.pnlShowMembers.BackColor = System.Drawing.Color.Firebrick;
-            this.pnlShowMembers.Controls.Add(this.lstbxShowMembers);
-            this.pnlShowMembers.Location = new System.Drawing.Point(809, 113);
-            this.pnlShowMembers.Name = "pnlShowMembers";
-            this.pnlShowMembers.Size = new System.Drawing.Size(568, 849);
-            this.pnlShowMembers.TabIndex = 8;
-            // 
-            // lstbxShowMembers
-            // 
-            this.lstbxShowMembers.BackColor = System.Drawing.Color.DarkRed;
-            this.lstbxShowMembers.FormattingEnabled = true;
-            this.lstbxShowMembers.ItemHeight = 23;
-            this.lstbxShowMembers.Location = new System.Drawing.Point(18, 15);
-            this.lstbxShowMembers.Name = "lstbxShowMembers";
-            this.lstbxShowMembers.Size = new System.Drawing.Size(535, 809);
-            this.lstbxShowMembers.TabIndex = 0;
-            // 
             // btnShowMembers
             // 
             this.btnShowMembers.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnShowMembers.Location = new System.Drawing.Point(817, 12);
+            this.btnShowMembers.Location = new System.Drawing.Point(359, 4);
             this.btnShowMembers.Name = "btnShowMembers";
-            this.btnShowMembers.Size = new System.Drawing.Size(180, 92);
+            this.btnShowMembers.Size = new System.Drawing.Size(85, 55);
             this.btnShowMembers.TabIndex = 9;
             this.btnShowMembers.Text = "Show Members";
             this.btnShowMembers.UseVisualStyleBackColor = true;
@@ -476,10 +459,12 @@
             // pnlViewMembers
             // 
             this.pnlViewMembers.BackColor = System.Drawing.Color.Firebrick;
+            this.pnlViewMembers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlViewMembers.Controls.Add(this.lstvwViewMembers);
-            this.pnlViewMembers.Location = new System.Drawing.Point(809, 113);
+            this.pnlViewMembers.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlViewMembers.Location = new System.Drawing.Point(822, 0);
             this.pnlViewMembers.Name = "pnlViewMembers";
-            this.pnlViewMembers.Size = new System.Drawing.Size(568, 849);
+            this.pnlViewMembers.Size = new System.Drawing.Size(568, 754);
             this.pnlViewMembers.TabIndex = 10;
             // 
             // lstvwViewMembers
@@ -490,12 +475,13 @@
             this.colHeadRace,
             this.colHeadClass,
             this.colHeadSpec});
+            this.lstvwViewMembers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstvwViewMembers.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lstvwViewMembers.FullRowSelect = true;
             this.lstvwViewMembers.GridLines = true;
-            this.lstvwViewMembers.Location = new System.Drawing.Point(13, 15);
+            this.lstvwViewMembers.Location = new System.Drawing.Point(0, 0);
             this.lstvwViewMembers.Name = "lstvwViewMembers";
-            this.lstvwViewMembers.Size = new System.Drawing.Size(540, 821);
+            this.lstvwViewMembers.Size = new System.Drawing.Size(564, 750);
             this.lstvwViewMembers.TabIndex = 0;
             this.lstvwViewMembers.UseCompatibleStateImageBehavior = false;
             this.lstvwViewMembers.View = System.Windows.Forms.View.Details;
@@ -520,15 +506,27 @@
             this.colHeadSpec.Text = "Spec";
             this.colHeadSpec.Width = 100;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Firebrick;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(341, 34);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "GiD Administration Dashboard";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1390, 1289);
+            this.ClientSize = new System.Drawing.Size(1390, 1061);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlViewMembers);
             this.Controls.Add(this.btnShowMembers);
-            this.Controls.Add(this.pnlShowMembers);
             this.Controls.Add(this.btnAddNewMember);
             this.Controls.Add(this.pnlAddNewMember);
             this.Controls.Add(this.btnShowTestInterface);
@@ -540,9 +538,9 @@
             this.pnlTestInterface.PerformLayout();
             this.pnlAddNewMember.ResumeLayout(false);
             this.pnlAddNewMember.PerformLayout();
-            this.pnlShowMembers.ResumeLayout(false);
             this.pnlViewMembers.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -575,8 +573,6 @@
         private System.Windows.Forms.Label lblGuildName;
         private System.Windows.Forms.ComboBox cmbbxGuildName;
         private System.Windows.Forms.ComboBox cmbbxRealm;
-        private System.Windows.Forms.Panel pnlShowMembers;
-        private System.Windows.Forms.ListBox lstbxShowMembers;
         private System.Windows.Forms.Button btnShowMembers;
         private System.Windows.Forms.Panel pnlViewMembers;
         private System.Windows.Forms.ListView lstvwViewMembers;
@@ -584,6 +580,7 @@
         private System.Windows.Forms.ColumnHeader colHeadRace;
         private System.Windows.Forms.ColumnHeader colHeadClass;
         private System.Windows.Forms.ColumnHeader colHeadSpec;
+        private System.Windows.Forms.Label label1;
     }
 }
 
