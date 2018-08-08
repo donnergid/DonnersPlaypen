@@ -21,7 +21,7 @@ namespace GIDAdministrationLegacy
             // Hiding the forms that the customer doesn't need to see on first load. 
             pnlTestInterface.Visible = false;
             pnlAddNewMember.Visible = false;
-            pnlShowMembers.Visible = false;
+            
             pnlViewMembers.Visible = false; 
 
             // Need to read in the file store items to populate infoStorage.gidMain
@@ -37,7 +37,10 @@ namespace GIDAdministrationLegacy
             infoStorage.gidMain.Add(one);
             infoStorage.gidMain.Add(two);
             infoStorage.gidMain.Add(three);
-            infoStorage.gidMain.Add(four); 
+            infoStorage.gidMain.Add(four);
+
+            // Set the users focus to the Show Users button
+            btnShowMembers.Focus();
 
         }
 
@@ -54,17 +57,22 @@ namespace GIDAdministrationLegacy
         private void btnAddNewMember_Click(object sender, EventArgs e)
         {
             pnlAddNewMember.Visible = true;
+            txbxCharName.Focus(); 
         }
 
         private void btnCreateFile_Click(object sender, EventArgs e)
         {
             try
             {
-                string fileName = ConfigurationManager.ConnectionStrings["filelocation"].ConnectionString + "GuildList.json";
+                // string fileName = ConfigurationManager.ConnectionStrings["filelocation"].ConnectionString + "GuildList.json";
 
-                FileStream fs = File.Create(fileName);
+                string fileName = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData);
+                DirectoryInfo dirInfo = Directory.CreateDirectory(fileName + "\\GiDAdministration");
+                
+                FileStream fs = File.Create(fileName + "\\GidAdministration\\GuildList.json");
                 fs.Close();
                 lblErrorStatus.Text = "File Created Successfully";
+
             }
             catch (IOException oEX)
             {
@@ -81,8 +89,11 @@ namespace GIDAdministrationLegacy
         {
             try
             {
-                string fileName = ConfigurationManager.ConnectionStrings["filelocation"].ConnectionString + "GuildList.json";
-                File.Delete(fileName);
+                // string fileName = ConfigurationManager.ConnectionStrings["filelocation"].ConnectionString + "GuildList.json";
+                string fileName = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData);
+
+                File.Delete(fileName + "\\GiDAdministration\\GuildList.json");
+
                 lblErrorStatus.Text = "File Deleted Successfully";
             }
             catch (IOException oEX)
@@ -103,7 +114,10 @@ namespace GIDAdministrationLegacy
 
         private void btnAddMemberApply_Click(object sender, EventArgs e)
         {
+            // Need to add in error handling in case the use hasn't changed anything in the UI. 
 
+
+            GuildMember tmpGMem = addNewGuildMember(); 
         }
 
         GuildMember addNewGuildMember()
@@ -111,12 +125,12 @@ namespace GIDAdministrationLegacy
             GuildMember tmpGmem = new GuildMember();
 
             tmpGmem.charName = txbxCharName.Text;
-            tmpGmem.charRace = cmbbxCharRace.SelectedIndex.ToString();
-            tmpGmem.charClass = cmbbxCharClass.SelectedIndex.ToString();
-            tmpGmem.charSpec = cmbbxCharSpec.SelectedIndex.ToString();
-            tmpGmem.locale = cmbbxLocale.SelectedIndex.ToString();
-            tmpGmem.currentGuild.guildName = cmbbxGuildName.SelectedIndex.ToString();
-            tmpGmem.currentGuild.realmName = cmbbxRealm.SelectedIndex.ToString();
+            tmpGmem.charRace = cmbbxCharRace.Text;
+            tmpGmem.charClass = cmbbxCharClass.Text;
+            tmpGmem.charSpec = cmbbxCharSpec.Text; 
+            tmpGmem.locale = cmbbxLocale.Text;
+            tmpGmem.currentGuild.guildName = cmbbxGuildName.Text;
+            tmpGmem.currentGuild.realmName = cmbbxRealm.Text; 
 
             infoStorage.gidMain.Add(tmpGmem);
 
@@ -125,33 +139,21 @@ namespace GIDAdministrationLegacy
 
         private void btnShowMembers_Click(object sender, EventArgs e)
         {
-            /*  This is the code to view using ShowMembers listbox
-                 
-            pnlShowMembers.Visible = true;
-            
-            // Parse the infoStorage.gidmain object. 
-            foreach (var gm in infoStorage.gidMain)
-            {
-                lstbxShowMembers.BeginUpdate();
-                lstbxShowMembers.Items.Add(gm.charName);
-                lstbxShowMembers.EndUpdate(); 
-            }*/
+            // Show the panel and clear the data. 
+            pnlViewMembers.Visible = true;
 
-            // This is the code to view using ListMembers listview
-            pnlViewMembers.Visible = true; 
+
 
             foreach (GuildMember tmpGM in infoStorage.gidMain)
             {
                 ListViewItem item = new ListViewItem(tmpGM.charName);
-
-                
+                                
                 item.SubItems.Add(tmpGM.charRace);
                 item.SubItems.Add(tmpGM.charClass);
                 item.SubItems.Add(tmpGM.charSpec);
+                item.SubItems.Add(tmpGM.currentGuild.guildName); 
                 
                 lstvwViewMembers.Items.Add(item);
-                btnShowMembers.Focus(); 
-                                
             }
             
             
