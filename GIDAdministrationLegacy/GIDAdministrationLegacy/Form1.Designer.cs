@@ -42,7 +42,6 @@
             this.cmbbxGuildName = new System.Windows.Forms.ComboBox();
             this.lblRealm = new System.Windows.Forms.Label();
             this.lblGuildName = new System.Windows.Forms.Label();
-            this.btnAddMemberApply = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbbxLocale = new System.Windows.Forms.ComboBox();
             this.lblAccLocale = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.colHeadClass = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHeadSpec = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSaveData = new System.Windows.Forms.Button();
             this.pnlTestInterface.SuspendLayout();
             this.pnlAddNewMember.SuspendLayout();
             this.pnlViewMembers.SuspendLayout();
@@ -81,9 +81,9 @@
             this.pnlTestInterface.Controls.Add(this.btnDeleteFile);
             this.pnlTestInterface.Controls.Add(this.btnCreateFile);
             this.pnlTestInterface.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTestInterface.Location = new System.Drawing.Point(0, 754);
+            this.pnlTestInterface.Location = new System.Drawing.Point(0, 764);
             this.pnlTestInterface.Name = "pnlTestInterface";
-            this.pnlTestInterface.Size = new System.Drawing.Size(1390, 307);
+            this.pnlTestInterface.Size = new System.Drawing.Size(1447, 307);
             this.pnlTestInterface.TabIndex = 0;
             // 
             // lblErrorStatus
@@ -95,7 +95,7 @@
             this.lblErrorStatus.Location = new System.Drawing.Point(839, 37);
             this.lblErrorStatus.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblErrorStatus.Name = "lblErrorStatus";
-            this.lblErrorStatus.Size = new System.Drawing.Size(220, 35);
+            this.lblErrorStatus.Size = new System.Drawing.Size(245, 40);
             this.lblErrorStatus.TabIndex = 11;
             this.lblErrorStatus.Text = "Errors show here...";
             // 
@@ -116,7 +116,7 @@
             this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplay.Location = new System.Drawing.Point(4, 167);
             this.lblDisplay.Name = "lblDisplay";
-            this.lblDisplay.Size = new System.Drawing.Size(641, 45);
+            this.lblDisplay.Size = new System.Drawing.Size(946, 65);
             this.lblDisplay.TabIndex = 4;
             this.lblDisplay.Text = "This is the text we will add to the JSON file. ";
             // 
@@ -166,9 +166,9 @@
             // btnShowTestInterface
             // 
             this.btnShowTestInterface.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnShowTestInterface.Location = new System.Drawing.Point(541, 4);
+            this.btnShowTestInterface.Location = new System.Drawing.Point(768, 6);
             this.btnShowTestInterface.Name = "btnShowTestInterface";
-            this.btnShowTestInterface.Size = new System.Drawing.Size(85, 55);
+            this.btnShowTestInterface.Size = new System.Drawing.Size(105, 55);
             this.btnShowTestInterface.TabIndex = 5;
             this.btnShowTestInterface.Text = "Admin";
             this.btnShowTestInterface.UseVisualStyleBackColor = true;
@@ -182,7 +182,6 @@
             this.pnlAddNewMember.Controls.Add(this.cmbbxGuildName);
             this.pnlAddNewMember.Controls.Add(this.lblRealm);
             this.pnlAddNewMember.Controls.Add(this.lblGuildName);
-            this.pnlAddNewMember.Controls.Add(this.btnAddMemberApply);
             this.pnlAddNewMember.Controls.Add(this.label2);
             this.pnlAddNewMember.Controls.Add(this.cmbbxLocale);
             this.pnlAddNewMember.Controls.Add(this.lblAccLocale);
@@ -210,7 +209,7 @@
             this.cmbbxRealm.Location = new System.Drawing.Point(235, 326);
             this.cmbbxRealm.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxRealm.Name = "cmbbxRealm";
-            this.cmbbxRealm.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxRealm.Size = new System.Drawing.Size(230, 40);
             this.cmbbxRealm.TabIndex = 7;
             this.cmbbxRealm.Text = "<Choose Realm>";
             // 
@@ -226,7 +225,7 @@
             this.cmbbxGuildName.Location = new System.Drawing.Point(235, 282);
             this.cmbbxGuildName.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxGuildName.Name = "cmbbxGuildName";
-            this.cmbbxGuildName.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxGuildName.Size = new System.Drawing.Size(230, 40);
             this.cmbbxGuildName.TabIndex = 6;
             this.cmbbxGuildName.Text = "<Choose Guild>";
             // 
@@ -256,27 +255,16 @@
             this.lblGuildName.TabIndex = 11;
             this.lblGuildName.Text = "Guild Name: ";
             // 
-            // btnAddMemberApply
-            // 
-            this.btnAddMemberApply.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAddMemberApply.Location = new System.Drawing.Point(368, 9);
-            this.btnAddMemberApply.Name = "btnAddMemberApply";
-            this.btnAddMemberApply.Size = new System.Drawing.Size(70, 35);
-            this.btnAddMemberApply.TabIndex = 8;
-            this.btnAddMemberApply.Text = "Apply";
-            this.btnAddMemberApply.UseVisualStyleBackColor = true;
-            this.btnAddMemberApply.Click += new System.EventHandler(this.btnAddMemberApply_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Firebrick;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 22F);
-            this.label2.Location = new System.Drawing.Point(9, 9);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.MinimumSize = new System.Drawing.Size(220, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 43);
+            this.label2.Size = new System.Drawing.Size(468, 62);
             this.label2.TabIndex = 10;
             this.label2.Text = "New Member Creation";
             // 
@@ -294,7 +282,7 @@
             this.cmbbxLocale.Location = new System.Drawing.Point(235, 238);
             this.cmbbxLocale.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxLocale.Name = "cmbbxLocale";
-            this.cmbbxLocale.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxLocale.Size = new System.Drawing.Size(230, 40);
             this.cmbbxLocale.TabIndex = 5;
             this.cmbbxLocale.Text = "<Choose Time Zone>";
             // 
@@ -307,7 +295,7 @@
             this.lblAccLocale.Location = new System.Drawing.Point(9, 238);
             this.lblAccLocale.MinimumSize = new System.Drawing.Size(220, 35);
             this.lblAccLocale.Name = "lblAccLocale";
-            this.lblAccLocale.Size = new System.Drawing.Size(220, 35);
+            this.lblAccLocale.Size = new System.Drawing.Size(238, 35);
             this.lblAccLocale.TabIndex = 8;
             this.lblAccLocale.Text = "Account Time Zone: ";
             // 
@@ -316,7 +304,7 @@
             this.txbxCharName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txbxCharName.Location = new System.Drawing.Point(235, 61);
             this.txbxCharName.Name = "txbxCharName";
-            this.txbxCharName.Size = new System.Drawing.Size(230, 29);
+            this.txbxCharName.Size = new System.Drawing.Size(230, 39);
             this.txbxCharName.TabIndex = 1;
             this.txbxCharName.Text = "<Enter Name>";
             // 
@@ -327,7 +315,7 @@
             this.cmbbxCharSpec.Location = new System.Drawing.Point(235, 192);
             this.cmbbxCharSpec.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxCharSpec.Name = "cmbbxCharSpec";
-            this.cmbbxCharSpec.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxCharSpec.Size = new System.Drawing.Size(230, 40);
             this.cmbbxCharSpec.TabIndex = 4;
             this.cmbbxCharSpec.Text = "...";
             // 
@@ -364,7 +352,7 @@
             this.cmbbxCharClass.Location = new System.Drawing.Point(235, 147);
             this.cmbbxCharClass.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxCharClass.Name = "cmbbxCharClass";
-            this.cmbbxCharClass.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxCharClass.Size = new System.Drawing.Size(230, 40);
             this.cmbbxCharClass.TabIndex = 3;
             this.cmbbxCharClass.Text = "<Choose Class>";
             this.cmbbxCharClass.SelectedIndexChanged += new System.EventHandler(this.cmbbxCharClass_SelectedIndexChanged);
@@ -391,7 +379,7 @@
             this.cmbbxCharRace.Location = new System.Drawing.Point(235, 105);
             this.cmbbxCharRace.MinimumSize = new System.Drawing.Size(220, 0);
             this.cmbbxCharRace.Name = "cmbbxCharRace";
-            this.cmbbxCharRace.Size = new System.Drawing.Size(230, 29);
+            this.cmbbxCharRace.Size = new System.Drawing.Size(230, 40);
             this.cmbbxCharRace.TabIndex = 2;
             this.cmbbxCharRace.Text = "<Choose Race>";
             // 
@@ -437,9 +425,9 @@
             // btnAddNewMember
             // 
             this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAddNewMember.Location = new System.Drawing.Point(450, 4);
+            this.btnAddNewMember.Location = new System.Drawing.Point(527, 6);
             this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(85, 55);
+            this.btnAddNewMember.Size = new System.Drawing.Size(204, 55);
             this.btnAddNewMember.TabIndex = 7;
             this.btnAddNewMember.Text = "New Member";
             this.btnAddNewMember.UseVisualStyleBackColor = true;
@@ -448,9 +436,9 @@
             // btnShowMembers
             // 
             this.btnShowMembers.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnShowMembers.Location = new System.Drawing.Point(359, 4);
+            this.btnShowMembers.Location = new System.Drawing.Point(527, 78);
             this.btnShowMembers.Name = "btnShowMembers";
-            this.btnShowMembers.Size = new System.Drawing.Size(85, 55);
+            this.btnShowMembers.Size = new System.Drawing.Size(204, 55);
             this.btnShowMembers.TabIndex = 9;
             this.btnShowMembers.Text = "Show Members";
             this.btnShowMembers.UseVisualStyleBackColor = true;
@@ -462,9 +450,9 @@
             this.pnlViewMembers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlViewMembers.Controls.Add(this.lstvwViewMembers);
             this.pnlViewMembers.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlViewMembers.Location = new System.Drawing.Point(822, 0);
+            this.pnlViewMembers.Location = new System.Drawing.Point(879, 0);
             this.pnlViewMembers.Name = "pnlViewMembers";
-            this.pnlViewMembers.Size = new System.Drawing.Size(568, 754);
+            this.pnlViewMembers.Size = new System.Drawing.Size(568, 764);
             this.pnlViewMembers.TabIndex = 10;
             // 
             // lstvwViewMembers
@@ -481,7 +469,7 @@
             this.lstvwViewMembers.GridLines = true;
             this.lstvwViewMembers.Location = new System.Drawing.Point(0, 0);
             this.lstvwViewMembers.Name = "lstvwViewMembers";
-            this.lstvwViewMembers.Size = new System.Drawing.Size(564, 750);
+            this.lstvwViewMembers.Size = new System.Drawing.Size(564, 760);
             this.lstvwViewMembers.TabIndex = 0;
             this.lstvwViewMembers.UseCompatibleStateImageBehavior = false;
             this.lstvwViewMembers.View = System.Windows.Forms.View.Details;
@@ -514,16 +502,29 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 34);
+            this.label1.Size = new System.Drawing.Size(506, 50);
             this.label1.TabIndex = 11;
             this.label1.Text = "GiD Administration Dashboard";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnSaveData
+            // 
+            this.btnSaveData.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSaveData.Location = new System.Drawing.Point(527, 152);
+            this.btnSaveData.Name = "btnSaveData";
+            this.btnSaveData.Size = new System.Drawing.Size(204, 55);
+            this.btnSaveData.TabIndex = 12;
+            this.btnSaveData.Text = "Save Data";
+            this.btnSaveData.UseVisualStyleBackColor = true;
+            this.btnSaveData.Click += new System.EventHandler(this.btnSaveData_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1390, 1061);
+            this.ClientSize = new System.Drawing.Size(1447, 1071);
+            this.Controls.Add(this.btnSaveData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlViewMembers);
             this.Controls.Add(this.btnShowMembers);
@@ -567,7 +568,6 @@
         private System.Windows.Forms.ComboBox cmbbxLocale;
         private System.Windows.Forms.Label lblAccLocale;
         private System.Windows.Forms.Button btnAddNewMember;
-        private System.Windows.Forms.Button btnAddMemberApply;
         private System.Windows.Forms.Label lblErrorStatus;
         private System.Windows.Forms.Label lblRealm;
         private System.Windows.Forms.Label lblGuildName;
@@ -581,6 +581,7 @@
         private System.Windows.Forms.ColumnHeader colHeadClass;
         private System.Windows.Forms.ColumnHeader colHeadSpec;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSaveData;
     }
 }
 

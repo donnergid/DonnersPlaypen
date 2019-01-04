@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GIDAdministrationLegacy
+namespace SortingVisualizer
 {
     static class Program
     {
@@ -17,11 +14,6 @@ namespace GIDAdministrationLegacy
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
         }
-
-
     }
-
-
 }
